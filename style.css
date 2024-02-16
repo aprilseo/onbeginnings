@@ -1,0 +1,31 @@
+body{
+    background-color:#28282B;
+    color:#F4F1DE;  
+}
+
+#marquee-container{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: xx-large;
+}
+
+.title{
+    font-family: "Libre-Bodoni", serif;
+    font-style:italic;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    letter-spacing: -0.7rem;
+}
+
+.centered-text {
+    text-align: center; 
+}
+
+#page-1{
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+    justify-content: center;
+    color:#F4F1DE;
+}
