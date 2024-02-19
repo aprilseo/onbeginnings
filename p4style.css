@@ -1,6 +1,8 @@
 body{
     background-color:#F4F1DE;
     color:#28282B;  
+    overflow:hidden;
+    margin:0;
 }
 
 #marquee-container{
@@ -23,14 +25,19 @@ body{
 .flex-container--content1{
     font-family: Arial, Helvetica, sans-serif;
     font-size: x-large;
+    padding:2rem;
+    background: linear-gradient(to left, rgba(40, 40, 43, 0.75), #F4F1DE);
 }
 
 .flex-container--content2{
     padding-left:4rem;
-    padding-right:1.5rem;
+    padding-right:4rem;
     padding-top:2rem;
     text-align: justify;
     font-size: large;
+    background: linear-gradient(to left, rgba(40, 40, 43, 0.75), #F4F1DE, #F4F1DE, #F4F1DE, #F4F1DE, #F4F1DE);
+    width: calc(50% - 2rem);
+    overflow: hidden; 
 }
 
 .flex-container--content3{
@@ -40,10 +47,16 @@ body{
     padding-right:4rem;
     padding-top:2rem;
     font-size: large;
+    background: linear-gradient(to right, rgba(40, 40, 43, 0.75), #F4F1DE, #F4F1DE, #F4F1DE, #F4F1DE, #F4F1DE);
+    width: calc(50% - 2rem);
+    overflow-Y:auto; 
 }
 
 .links {
     font-family: Arial, Helvetica, sans-serif;
     position: sticky;
     z-index: 1000;
+    margin-bottom: 7rem;
+    padding-left:15rem;
+    padding-top:15rem;
 }
