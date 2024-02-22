@@ -5,7 +5,6 @@ body{
     margin:0;
 }
 
-
 @font-face {
     font-family: 'ChiswickText-LightItalic-Trial'; /* Specify the desired font family name */
     src: url('ChiswickText-LightItalic-Trial.otf') format('opentype'); /* Specify the URL to your OTF font file */
@@ -28,6 +27,7 @@ body{
         0.5px -0.5px 0 #F4F1DE,
         -0.5px 0.5px 0 #F4F1DE; /* Black border */
 }
+
 
 .flex-container{
     font-family: Arial, Helvetica, sans-serif;
@@ -52,7 +52,7 @@ body{
 }
 
 .container1{
-    font-size:medium;
+    font-family: Arial, Helvetica, sans-serif;
     padding-left:4rem;
     padding-right:3rem;
     padding-top:2rem;
@@ -64,25 +64,17 @@ body{
     overflow: hidden; 
 }
 
-.paragraph-with-hover {
-    position: relative;
-}
-
 .paragraph-with-hover:hover .hover-text {
     opacity: 1;
-    font-family: 'ChiswickText-LightItalic-Trial', sans-serif; /* Use the font family in your CSS rules */
-    font-style: italic;
-    
 }
 
-.hover-text {
+.opacity {
     font-family: 'ChiswickText-LightItalic-Trial', sans-serif; /* Use the font family in your CSS rules */
     font-style: italic;
-    text-decoration: underline;
     top: 0;
     left: 0;
-    opacity: 0;
-    transition: opacity 0.8s ease;
+    opacity: 1;
+    text-decoration: underline;
 }
 
 .buttons {
@@ -94,30 +86,16 @@ body{
     margin-bottom: 7rem;
     padding-left: 13rem;
     padding-top:24rem;
+    opacity:0.25;
 }
 
 .buttons a {
-    color: #28282B; /* Set the default color of the links */
-    text-decoration: none; /* Remove underline */
+    color: #28282B; /* Set the default color of the links */ 
     display: inline-block; /* Ensure padding affects layout */
-    padding: 0.5rem 0.5rem; /* Adjust padding for spacing */
+    padding: 0.5rem 1rem; /* Adjust padding for spacing */
     transition: padding 0.3s, background-color 0.3s; /* Add transition for smooth animation */
     text-decoration: underline; /* Add underline as default */
     line-height:.5rem;
-}
-
-.buttons a:first-child:hover {
-    background-color: #277DA1; /* Highlight color for the first link */
-    color: #fff; /* Text color for the first link on hover */
-    padding-left: 0.5rem; /* Increase left padding on hover for the first link */
-    padding-right: 0.5rem; /* Decrease right padding on hover for the first link */
-}
-
-.buttons a:last-child:hover {
-    background-color: #E07A5F; /* Highlight color for the second link */
-    color: #fff; /* Text color for the second link on hover */
-    padding-left: 0.5rem; /* Increase left padding on hover for the second link */
-    padding-right: 0.5rem; /* Decrease right padding on hover for the second link */
 }
 
 .container2{
@@ -128,24 +106,9 @@ body{
     padding-top:2rem;
     font-size: large;
     overflow:scroll;
-    background: linear-gradient(to right, rgba(40, 40, 43, 0.75), #F4F1DE, #F4F1DE, #F4F1DE, #F4F1DE, #F4F1DE);
+    background: linear-gradient(to right, rgba(40, 40, 43, 0.75), #277DA1, #277DA1, #277DA1, #277DA1, #277DA1);
     width: calc(50% - 2rem);
     overflow-y: auto; 
-}
-
-.paragraph-with-hover {
-    position: relative;
-}
-
-.paragraph-with-hover:hover .hover-text {
-    opacity: 1;
-}
-
-.hover-text {
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.8s ease;
 }
 
 .links {
@@ -159,27 +122,53 @@ body{
     padding-top: 35rem;
 }
 
-.links a {
-    color: #28282B; /* Set the default color of the links */
+
+.title{
+    font-family: 'ChiswickText-LightItalic-Trial', sans-serif; /* Use the font family in your CSS rules */
+    font-style: italic;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    letter-spacing: -0.3rem;
+    padding-top:9rem;
+    padding-left:1rem;
+    color:#277DA1;
+    text-shadow: 
+    1px 1px 0 #F4F1DE,  
+    -1px -1px 0 #F4F1DE,
+    1px -1px 0 #F4F1DE,
+    -1px 1px 0 #F4F1DE; /* Black border */
+}
+
+.centered-text {
+    text-align: center; 
+}
+
+.page-1{
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+    justify-content: center;
+    color:#F4F1DE;
+    font-size: x-large;
+    padding-top:5rem;
+    margin-bottom:7rem;
+    padding-left:2rem;
+}
+
+.page-1 a {
+    color: #F4F1DE; /* Set the default color of the links */
     text-decoration: none; /* Remove underline */
     display: inline-block; /* Ensure padding affects layout */
-    padding: 0.5rem 1rem; /* Adjust padding for spacing */
+    padding: 0.5rem 0.5rem; /* Adjust padding for spacing */
     transition: padding 0.3s, background-color 0.3s; /* Add transition for smooth animation */
     line-height:.5rem;
-    text-decoration: underline; /* Add underline as default */
 }
 
-.links a:first-child:hover {
-    background-color: #277DA1; /* Highlight color for the first link */
-    color: #fff; /* Text color for the first link on hover */
-    padding-left: 1.5rem; /* Increase left padding on hover for the first link */
+.page-1 a:hover {
+    background-color: #F4F1DE; /* Highlight color for the first link */
+    color: #277DA1; /* Text color for the first link on hover */
+    padding-left: 0.5rem; /* Increase left padding on hover for the first link */
     padding-right: 0.5rem; /* Decrease right padding on hover for the first link */
 }
-
-.links a:last-child:hover {
-    background-color: #E07A5F; /* Highlight color for the second link */
-    color: #fff; /* Text color for the second link on hover */
-    padding-left: 1.5rem; /* Increase left padding on hover for the second link */
-    padding-right: 0.5rem; /* Decrease right padding on hover for the second link */
-}
-

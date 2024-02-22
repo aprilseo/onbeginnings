@@ -5,13 +5,27 @@ body{
     margin: 0;
 }
 
+@font-face {
+    font-family: 'ChiswickText-LightItalic-Trial'; /* Specify the desired font family name */
+    src: url('ChiswickText-LightItalic-Trial.otf') format('opentype'); /* Specify the URL to your OTF font file */
+    /* Add additional font attributes if needed */
+    font-weight: bold; /* Adjust font weight if it's bold */
+    font-style: italic; /* Adjust font style if it's italic */
+}    
+
 #marquee-container{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'ChiswickText-LightItalic-Trial', sans-serif; /* Use the font family in your CSS rules */
+    font-style: italic;
     font-size: xx-large;
-    padding-top:.5rem;
-    background-color: #28282B;
-    color:#F4F1DE;
+    color:#28282B;
+    padding-top:1rem;
+     background-color: #28282B;
     text-align: center;
+    text-shadow: 
+        0.5px 0.5px 0 #F4F1DE,  
+        -0.5px -0.5px 0 #F4F1DE,
+        0.5px -0.5px 0 #F4F1DE,
+        -0.5px 0.5px 0 #F4F1DE; /* Black border */
 }
 
 .flex-container{
@@ -23,12 +37,29 @@ body{
 }
 
 .flex-container--content{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: x-large;
-    padding:2rem;
-    background: linear-gradient(to left, rgba(40, 40, 43, 0.75), #F4F1DE);
+    font-family: 'ChiswickText-LightItalic-Trial', sans-serif; /* Use the font family in your CSS rules */
+    font-style: italic;
+    color:#F4F1DE;
+   font-size: x-large;
+   padding:2rem;
+   background: linear-gradient(to left, rgba(40, 40, 43, 0.75), #F4F1DE);
+   text-shadow: 
+        0.75px 0.75px 0 #28282B,  
+        -0.75px -0.75px 0 #28282B,
+        0.75px -0.75px 0 #28282B,
+        -0.75px 0.75px 0 #28282B; /* Black border */
 }
 
+.flex-container--content a,
+.flex-container--content a:visited {
+    color: inherit; /* Use the default text color */
+    text-decoration: none; /* Remove underline */
+}
+
+.flex-container--content a:hover {
+    color: #277DA1; /* Change text color on hover */
+    text-decoration: none; /* Add underline on hover */
+}
 .container1 {
     padding-left: 4rem;
     padding-right: 3rem;
@@ -51,6 +82,23 @@ body{
     background: linear-gradient(to right, rgba(40, 40, 43, 0.75), #F4F1DE, #F4F1DE, #F4F1DE, #F4F1DE, #F4F1DE);
     width: calc(50% - 2rem);
     overflow-y: auto; /* Enable vertical scrolling for container2 */
+}
+
+.paragraph-with-hover {
+    position: relative;
+}
+
+.paragraph-with-hover:hover .hover-text {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.hover-text {
+    text-decoration: underline;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease;
 }
 
 .links {

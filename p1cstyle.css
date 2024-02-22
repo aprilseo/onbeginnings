@@ -5,7 +5,6 @@ body{
     margin:0;
 }
 
-
 @font-face {
     font-family: 'ChiswickText-LightItalic-Trial'; /* Specify the desired font family name */
     src: url('ChiswickText-LightItalic-Trial.otf') format('opentype'); /* Specify the URL to your OTF font file */
@@ -28,6 +27,7 @@ body{
         0.5px -0.5px 0 #F4F1DE,
         -0.5px 0.5px 0 #F4F1DE; /* Black border */
 }
+
 
 .flex-container{
     font-family: Arial, Helvetica, sans-serif;
@@ -52,7 +52,7 @@ body{
 }
 
 .container1{
-    font-size:medium;
+    font-family: Arial, Helvetica, sans-serif;
     padding-left:4rem;
     padding-right:3rem;
     padding-top:2rem;
@@ -70,19 +70,16 @@ body{
 
 .paragraph-with-hover:hover .hover-text {
     opacity: 1;
-    font-family: 'ChiswickText-LightItalic-Trial', sans-serif; /* Use the font family in your CSS rules */
-    font-style: italic;
-    
+    text-decoration: underline;
 }
 
-.hover-text {
+.opacity {
+    text-decoration: underline;
     font-family: 'ChiswickText-LightItalic-Trial', sans-serif; /* Use the font family in your CSS rules */
     font-style: italic;
-    text-decoration: underline;
     top: 0;
     left: 0;
-    opacity: 0;
-    transition: opacity 0.8s ease;
+    opacity: 1;
 }
 
 .buttons {
@@ -94,6 +91,7 @@ body{
     margin-bottom: 7rem;
     padding-left: 13rem;
     padding-top:24rem;
+    opacity:0.25;
 }
 
 .buttons a {
@@ -106,21 +104,8 @@ body{
     line-height:.5rem;
 }
 
-.buttons a:first-child:hover {
-    background-color: #277DA1; /* Highlight color for the first link */
-    color: #fff; /* Text color for the first link on hover */
-    padding-left: 0.5rem; /* Increase left padding on hover for the first link */
-    padding-right: 0.5rem; /* Decrease right padding on hover for the first link */
-}
-
-.buttons a:last-child:hover {
-    background-color: #E07A5F; /* Highlight color for the second link */
-    color: #fff; /* Text color for the second link on hover */
-    padding-left: 0.5rem; /* Increase left padding on hover for the second link */
-    padding-right: 0.5rem; /* Decrease right padding on hover for the second link */
-}
-
 .container2{
+    font-family: Arial, Helvetica, sans-serif;
     padding:2rem;
     text-align: justify;
     padding-left:3.5rem;
@@ -139,9 +124,13 @@ body{
 
 .paragraph-with-hover:hover .hover-text {
     opacity: 1;
+    font-family: 'ChiswickText-LightItalic-Trial', sans-serif; /* Use the font family in your CSS rules */
+    font-style: italic;
 }
 
 .hover-text {
+    font-family: 'ChiswickText-LightItalic-Trial', sans-serif; /* Use the font family in your CSS rules */
+    font-style: italic;
     top: 0;
     left: 0;
     opacity: 0;
@@ -156,14 +145,14 @@ body{
     align-items: center;
     margin-bottom: 7rem;
     padding-left: 15rem;
-    padding-top: 35rem;
+    padding-top: 21rem;
 }
 
 .links a {
     color: #28282B; /* Set the default color of the links */
     text-decoration: none; /* Remove underline */
     display: inline-block; /* Ensure padding affects layout */
-    padding: 0.5rem 1rem; /* Adjust padding for spacing */
+    padding: 0.5rem 0.5rem; /* Adjust padding for spacing */
     transition: padding 0.3s, background-color 0.3s; /* Add transition for smooth animation */
     line-height:.5rem;
     text-decoration: underline; /* Add underline as default */
@@ -172,14 +161,14 @@ body{
 .links a:first-child:hover {
     background-color: #277DA1; /* Highlight color for the first link */
     color: #fff; /* Text color for the first link on hover */
-    padding-left: 1.5rem; /* Increase left padding on hover for the first link */
+    padding-left: 0.5rem; /* Increase left padding on hover for the first link */
     padding-right: 0.5rem; /* Decrease right padding on hover for the first link */
 }
 
 .links a:last-child:hover {
     background-color: #E07A5F; /* Highlight color for the second link */
     color: #fff; /* Text color for the second link on hover */
-    padding-left: 1.5rem; /* Increase left padding on hover for the second link */
+    padding-left: 0.5rem; /* Increase left padding on hover for the second link */
     padding-right: 0.5rem; /* Decrease right padding on hover for the second link */
 }
 

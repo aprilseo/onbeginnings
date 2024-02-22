@@ -1,32 +1,90 @@
-body{
-    background-color:#28282B;
-    color:#F4F1DE;  
+body {
+    background-color: #28282B;
+    color: #F4F1DE;  
+    overflow: hidden; /* Hide content that overflows the body */
 }
 
-#marquee-container{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: xx-large;
+@font-face {
+    font-family: 'ChiswickText-LightItalic-Trial'; /* Specify the desired font family name */
+    src: url('ChiswickText-LightItalic-Trial.otf') format('opentype'); /* Specify the URL to your OTF font file */
+    /* Add additional font attributes if needed */
+    font-weight: bold; /* Adjust font weight if it's bold */
+    font-style: italic; /* Adjust font style if it's italic */
 }
 
-.title{
-    font-family: "Libre-Bodoni", serif;
-    font-style:italic;
+.title {
+    font-family: 'ChiswickText-LightItalic-Trial', sans-serif; /* Use the font family in your CSS rules */
+    font-style: italic;
     font-size: 100px;
+    color:#28282B;
     display: flex;
     justify-content: center;
     align-items: center;
-    position:relative;
-    letter-spacing: -0.7rem;
+    position: relative;
+    letter-spacing: -0.5rem;
+    padding-top: 7rem;
+    opacity: 0; /* Initially hide the title */
+    animation: slideInTitle 2s forwards, fadeIn 2s forwards; /* Apply the slide-in and fade-in animations */
+    text-shadow: 
+        1px 1px 0 #F4F1DE,  
+        -1px -1px 0 #F4F1DE,
+        1px -1px 0 #F4F1DE,
+        -1px 1px 0 #F4F1DE; /* Black border */
 }
 
 .centered-text {
     text-align: center; 
+    line-height: 9rem;
 }
 
-#page-1{
-    font-family:Arial, Helvetica, sans-serif;
-    text-align:center;
+#page-1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
     justify-content: center;
-    color:#F4F1DE;
-    font-size: 2rem;
+    color: #F4F1DE;
+    font-size: 1.5rem;
+    opacity: 0; /* Initially hide the content */
+    animation: slideInContent 4s forwards, fadeIn 4s forwards; /* Apply the slide-in and fade-in animations */
+}
+
+#page-1 a {
+    color: #F4F1DE; /* Set the default color of the links */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Ensure padding affects layout */
+    padding: 1rem 1rem; /* Adjust padding for spacing */
+    transition: padding 0.3s, background-color 0.3s; /* Add transition for smooth animation */
+    line-height:.3rem;
+}
+
+#page-1 a:hover {
+    background-color: #F4F1DE; 
+    color: #28282B; 
+    padding: 1rem; /* Adjust padding for hover effect */
+}
+
+@keyframes slideInTitle {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInContent {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
