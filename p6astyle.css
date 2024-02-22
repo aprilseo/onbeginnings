@@ -1,0 +1,185 @@
+body{
+    background-color:#F4F1DE;
+    color:#28282B;  
+    overflow: hidden;
+    margin:0;
+}
+
+@font-face {
+    font-family: 'ChiswickText-LightItalic-Trial'; /* Specify the desired font family name */
+    src: url('ChiswickText-LightItalic-Trial.otf') format('opentype'); /* Specify the URL to your OTF font file */
+    /* Add additional font attributes if needed */
+    font-weight: bold; /* Adjust font weight if it's bold */
+    font-style: italic; /* Adjust font style if it's italic */
+}    
+
+#marquee-container{
+    font-family: 'ChiswickText-LightItalic-Trial', sans-serif; /* Use the font family in your CSS rules */
+    font-style: italic;
+    font-size: xx-large;
+    color:#28282B;
+    padding-top:1rem;
+     background-color: #28282B;
+    text-align: center;
+    text-shadow: 
+        0.5px 0.5px 0 #F4F1DE,  
+        -0.5px -0.5px 0 #F4F1DE,
+        0.5px -0.5px 0 #F4F1DE,
+        -0.5px 0.5px 0 #F4F1DE; /* Black border */
+}
+
+
+.flex-container{
+    font-family: Arial, Helvetica, sans-serif;
+    display:flex;
+    flex-direction: row; /*flex box layout-having left and right elements*/
+    height:100vh; 
+    width:100vw; 
+}
+
+.flex-container--content{
+    font-family: 'ChiswickText-LightItalic-Trial', sans-serif; /* Use the font family in your CSS rules */
+    font-style: italic;
+    color:#F4F1DE;
+   font-size: x-large;
+   padding:2rem;
+   background: linear-gradient(to left, rgba(40, 40, 43, 0.75), #F4F1DE);
+   text-shadow: 
+        0.75px 0.75px 0 #28282B,  
+        -0.75px -0.75px 0 #28282B,
+        0.75px -0.75px 0 #28282B,
+        -0.75px 0.75px 0 #28282B; /* Black border */
+}
+
+.flex-container--content a,
+.flex-container--content a:visited {
+    color: inherit; /* Use the default text color */
+    text-decoration: none; /* Remove underline */
+}
+
+.flex-container--content a:hover {
+    color: #277DA1; /* Change text color on hover */
+    text-decoration: none; /* Add underline on hover */
+}
+
+.container1{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left:4rem;
+    padding-right:3rem;
+    padding-top:2rem;
+    text-align: justify;
+    font-size: large;
+    overflow:scroll;
+    background: linear-gradient(to left, rgba(40, 40, 43, 0.75), #F4F1DE, #F4F1DE, #F4F1DE, #F4F1DE, #F4F1DE);
+    width: calc(50% - 2rem);
+    overflow: scroll; 
+}
+
+.paragraph-with-hover:hover .hover-text {
+    opacity: 1;
+}
+
+.opacity {
+    font-family: 'ChiswickText-LightItalic-Trial', sans-serif; /* Use the font family in your CSS rules */
+    font-style: italic;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.buttons {
+    font-family: Arial, Helvetica, sans-serif;
+    position: sticky;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7rem;
+    padding-left: 13rem;
+    padding-top:26rem;
+    opacity:0.25;
+}
+
+.buttons a {
+    color: #28282B; /* Set the default color of the links */ 
+    display: inline-block; /* Ensure padding affects layout */
+    padding: 0.5rem 1rem; /* Adjust padding for spacing */
+    transition: padding 0.3s, background-color 0.3s; /* Add transition for smooth animation */
+    text-decoration: underline; /* Add underline as default */
+    line-height:.5rem;
+}
+
+.container2{
+    padding:2rem;
+    text-align: justify;
+    padding-left:3.5rem;
+    padding-right:4rem;
+    padding-top:2rem;
+    font-size: large;
+    overflow:scroll;
+    background: linear-gradient(to right, rgba(40, 40, 43, 0.75), #75c8ae, #75c8ae, #75c8ae, #75c8ae, #75c8ae);
+    width: calc(50% - 2rem);
+    overflow-y: auto; 
+}
+
+.links {
+    font-family: Arial, Helvetica, sans-serif;
+    position: sticky;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7rem;
+    padding-left: 15rem;
+    padding-top: 35rem;
+}
+
+
+.title{
+    font-family: 'ChiswickText-LightItalic-Trial', sans-serif; /* Use the font family in your CSS rules */
+    font-style: italic;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    letter-spacing: -0.3rem;
+    padding-top:9rem;
+    padding-left:1rem;
+    color:#75c8ae;
+    text-shadow: 
+    1px 1px 0 #F4F1DE,  
+    -1px -1px 0 #F4F1DE,
+    1px -1px 0 #F4F1DE,
+    -1px 1px 0 #F4F1DE; /* Black border */
+}
+
+.centered-text {
+    text-align: center; 
+}
+
+.page-1{
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+    justify-content: center;
+    color:#F4F1DE;
+    font-size: x-large;
+    padding-top:5rem;
+    margin-bottom:7rem;
+    padding-left:2rem;
+}
+
+.page-1 a {
+    color: #F4F1DE; /* Set the default color of the links */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Ensure padding affects layout */
+    padding: 0.5rem 0.5rem; /* Adjust padding for spacing */
+    transition: padding 0.3s, background-color 0.3s; /* Add transition for smooth animation */
+    line-height:.5rem;
+}
+
+.page-1 a:hover {
+    background-color: #F4F1DE; /* Highlight color for the first link */
+    color: #75c8ae; /* Text color for the first link on hover */
+    padding-left: 0.5rem; /* Increase left padding on hover for the first link */
+    padding-right: 0.5rem; /* Decrease right padding on hover for the first link */
+}
