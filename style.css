@@ -59,6 +59,7 @@ body {
 #page-1 a:hover {
     background-color: #F4F1DE; 
     color: #28282B; 
+    text-decoration: underline;
     padding: 1rem; /* Adjust padding for hover effect */
 }
 

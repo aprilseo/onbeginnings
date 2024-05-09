@@ -13,8 +13,8 @@ body{
     font-style: italic; /* Adjust font style if it's italic */
 }    
 
-#marquee-container{
-    font-family: 'ChiswickText-LightItalic-Trial', sans-serif; /* Use the font family in your CSS rules */
+/* #marquee-container{
+    font-family: 'ChiswickText-LightItalic-Trial', sans-serif; 
     font-style: italic;
     font-size: xx-large;
     color:#28282B;
@@ -25,11 +25,11 @@ body{
         0.5px 0.5px 0 #F4F1DE,  
         -0.5px -0.5px 0 #F4F1DE,
         0.5px -0.5px 0 #F4F1DE,
-        -0.5px 0.5px 0 #F4F1DE; /* Black border */
-}
+        -0.5px 0.5px 0 #F4F1DE; 
+} */
 
 
-.flex-container{
+.book{
     font-family: Arial, Helvetica, sans-serif;
     display:flex;
     flex-direction: row; /*flex box layout-having left and right elements*/
@@ -37,35 +37,33 @@ body{
     width:100vw; 
 }
 
-.flex-container--content{
+.pages{
     font-family: 'ChiswickText-LightItalic-Trial', sans-serif; /* Use the font family in your CSS rules */
     font-style: italic;
     color:#F4F1DE;
-   font-size: x-large;
-   padding:2rem;
-   background: linear-gradient(to left, rgba(40, 40, 43, 0.75), #F4F1DE);
-   text-shadow: 
-        0.75px 0.75px 0 #28282B,  
-        -0.75px -0.75px 0 #28282B,
-        0.75px -0.75px 0 #28282B,
-        -0.75px 0.75px 0 #28282B; /* Black border */
+    font-size: x-large;
+    padding:2rem;
+    background: #28282B;
+    text-decoration: none;
 }
 
-.flex-container--content a,
-.flex-container--content a:visited {
+.pages a,
+.pages a:visited {
     color: inherit; /* Use the default text color */
     text-decoration: none; /* Remove underline */
 }
 
-.flex-container--content a:hover {
+.pages a:hover {
     color: #277DA1; /* Change text color on hover */
     text-decoration: none; /* Add underline on hover */
 }
 
 .container1{
     font-family: Arial, Helvetica, sans-serif;
-    padding-left:4rem;
-    padding-right:3rem;
+    position:relative;
+    font-size:medium;
+    padding-left:6rem;
+    padding-right:6rem;
     padding-top:2rem;
     text-align: justify;
     font-size: large;
@@ -75,7 +73,7 @@ body{
     overflow: hidden; 
 }
 
-.paragraph-with-hover:hover .hover-text {
+.paragraph:hover .hover-text {
     opacity: 1;
 }
 
@@ -90,24 +88,28 @@ body{
 
 .buttons {
     font-family: Arial, Helvetica, sans-serif;
-    position: sticky;
+    position: absolute;
     z-index: 1000;
     justify-content: center;
     align-items: center;
-    margin-bottom: 7rem;
-    padding-left: 13rem;
-    padding-top:24rem;
-    opacity:0.25;
+    padding:1rem;
+    width:75%;
+    display:flex;
+    justify-content: space-between;
+    bottom:1.5rem;
 }
 
 .buttons a {
     color: #28282B; /* Set the default color of the links */ 
+    opacity:50%;
     display: inline-block; /* Ensure padding affects layout */
     padding: 0.5rem 1rem; /* Adjust padding for spacing */
     transition: padding 0.3s, background-color 0.3s; /* Add transition for smooth animation */
     text-decoration: underline; /* Add underline as default */
     line-height:.5rem;
 }
+
+
 
 .container2{
     padding:2rem;
@@ -157,7 +159,7 @@ body{
     text-align: center; 
 }
 
-.page-1{
+.resume{
     font-family:Arial, Helvetica, sans-serif;
     text-align:center;
     justify-content: center;
@@ -168,7 +170,7 @@ body{
     padding-left:2rem;
 }
 
-.page-1 a {
+.resume a {
     color: #F4F1DE; /* Set the default color of the links */
     text-decoration: none; /* Remove underline */
     display: inline-block; /* Ensure padding affects layout */
@@ -177,9 +179,10 @@ body{
     line-height:.5rem;
 }
 
-.page-1 a:hover {
+.resume a:hover {
     background-color: #F4F1DE; /* Highlight color for the first link */
     color: #E07A5F; /* Text color for the first link on hover */
     padding-left: 0.5rem; /* Increase left padding on hover for the first link */
     padding-right: 0.5rem; /* Decrease right padding on hover for the first link */
+    text-decoration: underline;
 }

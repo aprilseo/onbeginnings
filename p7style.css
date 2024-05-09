@@ -28,55 +28,53 @@ body{
         -0.5px 0.5px 0 #F4F1DE; /* Black border */
 }
 
-.flex-container{
+.book{
     display:flex;
     flex-direction: row; /*flex box layout-having left and right elements*/
     height:100vh; 
     width:100vw; 
 }
 
-.flex-container--content{
+.pages{
     font-family: 'ChiswickText-LightItalic-Trial', sans-serif; /* Use the font family in your CSS rules */
     font-style: italic;
     color:#F4F1DE;
-   font-size: x-large;
-   padding:2rem;
-   background: linear-gradient(to left, rgba(40, 40, 43, 0.75), #F4F1DE);
-   text-shadow: 
-        0.75px 0.75px 0 #28282B,  
-        -0.75px -0.75px 0 #28282B,
-        0.75px -0.75px 0 #28282B,
-        -0.75px 0.75px 0 #28282B; /* Black border */
+    font-size: x-large;
+    padding:2rem;
+    background: #28282B;
+    text-decoration: none;
 }
 
-.flex-container--content a,
-.flex-container--content a:visited {
+.pages a,
+.pages a:visited {
     color: inherit; /* Use the default text color */
     text-decoration: none; /* Remove underline */
 }
 
-.flex-container--content a:hover {
+.pages a:hover {
     color: #277DA1; /* Change text color on hover */
     text-decoration: none; /* Add underline on hover */
 }
 .container1 {
     font-family: Arial, Helvetica, sans-serif;
-    padding-left: 4rem;
-    padding-right: 3rem;
-    padding-top: 2rem;
+    position:relative;
+    font-size:medium;
+    padding-left:6rem;
+    padding-right:6rem;
+    padding-top:2rem;
     text-align: justify;
     font-size: large;
+    overflow:scroll;
     background: linear-gradient(to left, rgba(40, 40, 43, 0.75), #F4F1DE, #F4F1DE, #F4F1DE, #F4F1DE, #F4F1DE);
     width: calc(50% - 2rem);
-    overflow: scroll; 
+    overflow: hidden; 
 }
 
-
-.paragraph-with-hover {
+.paragraph {
     position: relative;
 }
 
-.paragraph-with-hover:hover .hover-text {
+.paragraph:hover .hover-text {
     opacity: 1;
     font-family: 'ChiswickText-LightItalic-Trial', sans-serif; /* Use the font family in your CSS rules */
     font-style: italic;
@@ -94,23 +92,23 @@ body{
 
 .buttons {
     font-family: Arial, Helvetica, sans-serif;
-    position: sticky;
+    position: absolute;
     z-index: 1000;
     justify-content: center;
     align-items: center;
-    margin-bottom: 8rem;
-    padding-left: 13rem;
-    padding-top:24rem;
-    opacity:1;
+    width:72%;
+    display:flex;
+    justify-content: space-between;
+    bottom:1.5rem;
 }
 
 .buttons a {
-    color: #28282B; /* Set the default color of the links */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Ensure padding affects layout */
-    padding: 0.5rem 0.5rem; /* Adjust padding for spacing */
-    transition: padding 0.3s, background-color 0.3s; /* Add transition for smooth animation */
-    text-decoration: underline; /* Add underline as default */
+    color: #28282B; 
+    text-decoration: none; 
+    display: inline-block; 
+    padding: 0.5rem 0.5rem; 
+    transition: padding 0.3s, background-color 0.3s; 
+    text-decoration: none;
     line-height:.5rem;
 }
 
@@ -118,6 +116,7 @@ body{
     background-color: #277DA1; /* Highlight color for the first link */
     color: #fff; /* Text color for the first link on hover */
     padding-left: 0.5rem; /* Increase left padding on hover for the first link */
+    text-decoration: underline;
     padding-right: 0.5rem; /* Decrease right padding on hover for the first link */
 }
 
@@ -125,6 +124,7 @@ body{
     background-color: #E07A5F; /* Highlight color for the second link */
     color: #fff; /* Text color for the second link on hover */
     padding-left: 0.5rem; /* Increase left padding on hover for the second link */
+    text-decoration: underline;
     padding-right: 0.5rem; /* Decrease right padding on hover for the second link */
 }
 
